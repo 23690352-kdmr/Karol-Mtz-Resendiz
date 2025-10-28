@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Calculadora Colorida</title>
+  <style>
+    body {
+      background: linear-gradient(135deg, #74ebd5, #ACB6E5);
+      font-family: 'Poppins', sans-serif;
+      text-align: center;
+      margin-top: 50px;
+      color: #333;
+    }
+
+    .calculadora {
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+      display: inline-block;
+      padding: 30px 50px;
+    }
+
+    h1 {
+      color: #4b6cb7;
+    }
+
+    input[type="text"] {
+      padding: 10px;
+      margin: 10px;
+      width: 200px;
+      border: 2px solid #4b6cb7;
+      border-radius: 8px;
+      text-align: center;
+      font-size: 16px;
+      outline: none;
+      transition: 0.3s;
+    }
+
+    input[type="text"]:focus {
+      border-color: #182848;
+      box-shadow: 0 0 10px #4b6cb7;
+    }
+
+    button {
+      background-color: #4b6cb7;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      margin: 10px;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    button:hover {
+      transform: scale(1.05);
+    }
+
+    /* Colores diferentes para cada operación */
+    .suma { background-color: #4CAF50; }          /* Verde */
+    .resta { background-color: #E91E63; }         /* Rosa */
+    .multi { background-color: #FF9800; }         /* Naranja */
+    .dividir { background-color: #2196F3; }       /* Azul */
+  </style>
+
+  <script>
+    function obtenerValores() {
+      const valor1 = parseFloat(document.getElementsByName("num1")[0].value);
+      const valor2 = parseFloat(document.getElementsByName("num2")[0].value);
+      return { valor1, valor2 };
+    }
+
+    function suma() {
+      const { valor1, valor2 } = obtenerValores();
+      alert("El resultado de la suma es " + (valor1 + valor2));
+    }
+
+    function resta() {
+      const { valor1, valor2 } = obtenerValores();
+      alert("El resultado de la resta es " + (valor1 - valor2));
+    }
+
+    function multi() {
+      const { valor1, valor2 } = obtenerValores();
+      alert("El resultado de la multiplicación es " + (valor1 * valor2));
+    }
+
+    function dividir() {
+      const { valor1, valor2 } = obtenerValores();
+      if (valor2 === 0 || isNaN(valor2)) {
+        alert("No se puede dividir entre 0");
+      } else {
+        alert("El resultado de la división es " + (valor1 / valor2));
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <div class="calculadora">
+    <h1>🧮 Calculadora Colorida</h1>
+    <form name="form" onsubmit="return false">
+      <h3>Introduce el número 1:</h3>
+      <input type="text" name="num1" placeholder="Ejemplo: 5">
+
+      <h3>Introduce el número 2:</h3>
+      <input type="text" name="num2" placeholder="Ejemplo: 3">
+    </form>
+
+    <div>
+      <button class="suma" onclick="suma()">➕ Suma</button>
+      <button class="resta" onclick="resta()">➖ Resta</button>
+      <button class="multi" onclick="multi()">✖️ Multiplicación</button>
+      <button class="dividir" onclick="dividir()">➗ División</button>
+    </div>
+  </div>
+</body>
+</html>
