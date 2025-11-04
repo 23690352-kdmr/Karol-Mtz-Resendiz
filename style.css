@@ -1,0 +1,84 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #f0f4f8;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+header, footer {
+  background: #007bff;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+}
+
+.producto {
+  display: flex;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  padding: 30px;
+  gap: 40px;
+  max-width: 900px;
+}
+
+.imagenes img {
+  border-radius: 10px;
+}
+
+#imagen-principal {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border: 2px solid #007bff;
+}
+
+.miniaturas img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  margin: 5px;
+  border-radius: 8px;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: 0.3s;
+}
+
+.miniaturas img:hover {
+  border-color: #007bff;
+}
+
+.info {
+  max-width: 400px;
+}
+
+.botones button {
+  margin: 8px;
+  padding: 10px 15px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+.botones button:hover {
+  background-color: #0056b3;
+}
+
+#precio {
+  font-size: 24px;
+  font-weight: bold;
+  color: #444;
+  margin-top: 20px;
+  transition: all 0.4s ease;
+}

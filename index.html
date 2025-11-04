@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tienda - Producto</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header>
+    <h1>🛍️ Tienda Online CLASS - Botas de temporada</h1>
+  </header>
+
+  <main>
+    <section class="producto">
+      <div class="imagenes">
+        <img id="imagen-principal" src="1.png" alt="Producto lado 1">
+        <div class="miniaturas">
+          <img src="2.png" alt="Lado 1" onclick="cambiarImagen('2.png')">
+          <img src="3.png" alt="Lado 2" onclick="cambiarImagen('3.png')">
+          <img src="4.png" alt="Lado 3" onclick="cambiarImagen('4.png')">
+        </div>
+      </div>
+
+      <div class="info">
+        <h2>Producto Premium</h2>
+        <p id="descripcion">
+          Este es un producto de alta calidad, ideal para lucir espectacular.
+          Su diseño moderno y resistente lo hacen perfecto para tu estilo de vida.
+        </p>
+        <div class="botones">
+          <button onclick="mostrarDescripcion()">Mostrar Descripción</button>
+          <button onclick="ocultarDescripcion()">Ocultar Descripción</button>
+          <button onclick="resaltarPrecio()">Resaltar Precio</button>
+        </div>
+        <p id="precio">$1,299.00 MXN</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Tienda Online - Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>
